@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skill Swap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style (1).css">
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <div class="floating-robot">🤖</div>
+
+        <div class="form-header">
+            <h1 class="title">Skill Swap</h1>
+            <p class="subtitle">Connect • Learn • Grow</p>
+        </div>
+
+        <form id="skillForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="college" name="college" required placeholder="College">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="major" name="major" required placeholder="Major">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="whatsapp" name="whatsapp" required placeholder="WhatsApp Number">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="skillsHave">Skills You Have</label>
+                <textarea id="skillsHave" name="skillsHave" required placeholder="List the skills you can teach others"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Skills You Want to Learn</label>
+                <div class="category-selector">
+                    <button type="button" class="category-btn active" data-category="programming">Programming</button>
+                    <button type="button" class="category-btn" data-category="languages">Languages</button>
+                    <button type="button" class="category-btn" data-category="design">Design</button>
+                    <button type="button" class="category-btn" data-category="cybersecurity">Cybersecurity</button>
+                    <button type="button" class="category-btn" data-category="biology">Biology</button>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-options programming show">
+                        <div class="skill-option">JavaScript</div>
+                        <div class="skill-option">Python</div>
+                        <div class="skill-option">Java</div>
+                        <div class="skill-option">C</div>
+                        <div class="skill-option">HTML/CSS</div>
+                    </div>
+
+                    <div class="skills-options languages">
+                        <div class="skill-option">English</div>
+                        <div class="skill-option">French</div>
+                        <div class="skill-option">German</div>
+                        <div class="skill-option">Spanish</div>
+                        <div class="skill-option">Chinese</div>
+                    </div>
+
+                    <div class="skills-options design">
+                        <div class="skill-option">UX Design</div>
+                        <div class="skill-option">UI Design</div>
+                        <div class="skill-option">Figma</div>
+                        <div class="skill-option">Adobe XD</div>
+                    </div>
+
+                    <div class="skills-options cybersecurity">
+                        <div class="skill-option">Ethical Hacking</div>
+                        <div class="skill-option">Network Security</div>
+                        <div class="skill-option">Cryptography</div>
+                    </div>
+                    <div class="skills-options biology">
+                        <div class="skill-option">Anatomy</div>
+                        <div class="skill-option">Genetics</div>
+                        <div class="skill-option">Microbiology</div>
+                        <div class="skill-option">Ecology</div>
+                        <div class="skill-option">Biochemistry</div>
+                        <div class="skill-option">Systmatic of plant </div>
+                        <div class="skill-option">Human</div>
+                    </div>
+                </div>
+
+                <div class="manual-input">
+                    <input type="text" id="manualSkill" placeholder="Or enter skill manually">
+                    <button type="button" id="addManualSkill" class="add-btn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+
+                <div class="selected-skills" id="selectedSkills"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Send</span>
+                <div class="submit-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+            </button>
+
+            <div class="form-footer">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Sending...</span>
+                </div>
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Your info was sent successfully!</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- الروبوت الكامل الجديد -->
+    <div class="big-robot-overlay" id="bigRobot">
+        <div class="big-robot-container">
+            <div class="robot-animation">
+                <div class="robot-head">
+                    <div class="robot-eye left-eye"></div>
+                    <div class="robot-eye right-eye"></div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-body">
+                    <div class="robot-arm left-arm"></div>
+                    <div class="robot-torso"></div>
+                    <div class="robot-arm right-arm"></div>
+                </div>
+            </div>
+            <div class="big-robot-message">We'll contact you soon!</div>
+            <div class="robot-submessage">Our team will reach out to you shortly</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="/script (2).js"></script>
+</body>
+
+</html>
